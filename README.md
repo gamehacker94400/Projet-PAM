@@ -1,12 +1,41 @@
-usage :
+# Projet-PAM
 
-1 ) Installer la SDL
+## Aperçu
+Projet-PAM est un jeu développé en utilisant SDL (Simple DirectMedia Layer) avec le langage de programmation C. Ce projet vise à offrir une expérience de jeu engageante tout en servant de projet d'apprentissage pour ceux qui s'intéressent au développement de jeux.
 
-2 ) télécharger le repo ou clonez le
+## Fonctionnalités
+- **Gameplay de base** : Une expérience de jeu amusante et interactive.
+- **Plateforme** : Construit avec SDL pour une compatibilité multiplateforme.
+- **Plans futurs** :
+  - Implémenter des animations.
+  - Ajouter de nouvelles fonctionnalités pour enrichir l'expérience de jeu.
 
-3 ) dans le dossier du jeu lancer la commande "make" puis "./game"
+## Installation et Utilisation
 
-voilà voilà :)
+Pour commencer avec Projet-PAM, suivez ces étapes :
 
+1. **Installer SDL** :  
+   Assurez-vous que SDL est installé sur votre système. Pour les instructions d'installation, visitez le [site officiel de SDL](https://www.libsdl.org/).
 
-De ce qui reste a faire c'est sont les animation et aussi un peut ajouter d'autre features.
+2. **Télécharger ou Cloner le Dépôt** :  
+   ```bash
+   git clone https://github.com/gamehacker94400/Projet-PAM.git
+   cd Projet-PAM
+   ```
+
+3. **Compiler le Jeu** :  
+   Exécutez les commandes suivantes dans le répertoire du projet :
+   ```bash
+   make
+   ./game
+   ```
+
+4. **Amusez-vous bien !**
+
+## Feuille de Route
+- [ ] Ajouter des animations au jeu.
+- [ ] Introduire de nouvelles fonctionnalités de gameplay.
+- [ ] Améliorer l'interface utilisateur et l'expérience.
+
+## Licence
+nothing for now.
