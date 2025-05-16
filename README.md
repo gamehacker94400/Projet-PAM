@@ -31,6 +31,9 @@ Pour commencer avec Projet-PAM, suivez ces étapes :
    ```
 
 4. **Amusez-vous bien !**
+   Pour jouer vous devez appuyer sur espace
+   et vous vous déplacer avec les flèches directionnel
+   et appuyer sur échapp pour mettre le jeu en pause.
 
 ## Feuille de Route
 - [ ] Ajouter des animations au jeu.
