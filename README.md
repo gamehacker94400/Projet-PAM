@@ -24,7 +24,7 @@ Pour commencer avec Projet-PAM, suivez ces étapes :
    ```
 
 3. **Compiler le Jeu** :  
-   Exécutez les commandes suivantes dans le répertoire du projet :
+   Exécutez les commandes suivantes dans le répertoire src du projet :
    ```bash
    make
    ./game
