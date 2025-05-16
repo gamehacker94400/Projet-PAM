@@ -48,7 +48,7 @@ int main()
     }
 
     // Chargement de l'image de fond du jeu
-    SDL_Texture *background = IMG_LoadTexture(render, "assets/bg.jpg");
+    SDL_Texture *background = IMG_LoadTexture(render, "../assets/bg.jpg");
     if (!background)
     {
         SDL_Log("Erreur chargement background: %s", IMG_GetError());
@@ -56,7 +56,7 @@ int main()
     }
 
     // Chargement de la police utilisée pour les textes
-    TTF_Font *font = TTF_OpenFont("assets/font.otf", 24);
+    TTF_Font *font = TTF_OpenFont("../assets/font.otf", 24);
     if (!font)
     {
         SDL_Log("Erreur chargement font: %s", TTF_GetError());
@@ -77,7 +77,7 @@ int main()
     entities->JusteStarted = true;         // Permet d'afficher une seule fois l'écran d'accueil
 
     // Chargement et initialisation du joueur, des monstres, des projectiles et des météorites
-    initPlayer(player, render, "assets/player.png");
+    initPlayer(player, render, "../assets/player.png");
     InitMonsters(render, entities);
     InitProjectiles(entities, render);
     InitComets(render, entities);

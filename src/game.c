@@ -49,7 +49,7 @@ void RenderAll(SDL_Renderer *render, SDL_Texture *background, Entities *entities
   RenderPlayer(entities, render);
   RenderMonsters(entities, render);
   RenderEventBar(render, entities);
-  
+
   if (entities->event_start) {
     RenderComet(entities, render);
   }
@@ -64,7 +64,7 @@ void RenderScore(Player *player, TTF_Font *font, SDL_Renderer *render)
   SDL_Surface *fontSurf = TTF_RenderText_Blended(font, score, couleur);
   SDL_Texture *fontText = SDL_CreateTextureFromSurface(render, fontSurf);
   SDL_FreeSurface(fontSurf);
-  
+
   SDL_Rect fontRect = {50, 50, 0 , 0};
   SDL_QueryTexture(fontText, NULL, NULL, &fontRect.w, &fontRect.h);
   SDL_RenderCopy(render, fontText, NULL, &fontRect);
@@ -79,8 +79,8 @@ void Home(SDL_Renderer *render, SDL_Texture *background)
   SDL_Rect bannerRect = {SCREEN_WIDTH / 3, 10, 500, 450};
   SDL_Rect buttonRect = {(SCREEN_WIDTH / 3)+60, (SCREEN_HEIGHT / 2) + 50, 400, 150};
 
-  button = IMG_LoadTexture(render, "assets/button.png");
-  banner = IMG_LoadTexture(render, "assets/banner.png");
+  button = IMG_LoadTexture(render, "../assets/button.png");
+  banner = IMG_LoadTexture(render, "../assets/banner.png");
 
   SDL_RenderCopy(render, background, NULL, NULL);
   SDL_RenderCopy(render, button, NULL, &buttonRect);
@@ -107,7 +107,7 @@ void ClearMonster(Entities *entitie, int count)
 void InitComets(SDL_Renderer *render, Entities *entitie){
   for (int i = 0; i < MAX_COMET; i++){
     entitie->comets[i] = malloc(sizeof(Comet));
-    initComet(entitie->comets[i], render, "assets/comet.png");
+    initComet(entitie->comets[i], render, "../assets/comet.png");
   }
 }
 
@@ -182,11 +182,11 @@ void InitMonsters(SDL_Renderer *render, Entities *entitie)
   for (int i = 0; i < MAX_MONSTER - 1; i++)
   {
     entitie->monster[i] = malloc(sizeof(Monster));
-    initMonster(entitie->monster[i], render, "assets/mummy.png");
+    initMonster(entitie->monster[i], render, "../assets/mummy.png");
   }
 
   entitie->monster[MAX_MONSTER - 1] = malloc(sizeof(Monster));
-  initAlien(entitie->monster[MAX_MONSTER - 1], render, "assets/alien.png");
+  initAlien(entitie->monster[MAX_MONSTER - 1], render, "../assets/alien.png");
 }
 
 // Fait avancer tous les monstres et gère leur mort
@@ -214,7 +214,7 @@ void InitProjectiles(Entities *entitie, SDL_Renderer *render)
   for (int i = 0; i < MAX_PROJECTILE; i++)
   {
     entitie->projectile[i] = malloc(sizeof(Projectile));
-    initProjectile(entitie->projectile[i], render, "assets/projectile.png", entitie->player);
+    initProjectile(entitie->projectile[i], render, "../assets/projectile.png", entitie->player);
     entitie->projectile[i]->is_projectile_active = false;
   }
 }

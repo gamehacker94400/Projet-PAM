@@ -62,7 +62,7 @@ void LaunchProject(Projectile *project[], SDL_Renderer *render, Player *player)
     if (project[i] && !project[i]->is_projectile_active)  // Si le projectile est inactif
     {
       // Initialise le projectile avec une image et la position du joueur
-      initProjectile(project[i], render, "assets/projectile.png", player);
+      initProjectile(project[i], render, "../assets/projectile.png", player);
       project[i]->is_projectile_active = true;  // Active le projectile
       break;  // Sort de la boucle dès qu'un projectile a été lancé
     }
@@ -82,7 +82,7 @@ void initPlayer(Player *player, SDL_Renderer *render, const char *imgpath)
   player->health = 100;  // Santé initiale du joueur
   player->max_health = 100;  // Santé maximale du joueur
   player->velocity = 10;  // Vitesse de déplacement du joueur
-  
+
   // Liaison des fonctions aux actions du joueur
   player->MoveRight = MoveRight;
   player->MoveLeft = MoveLeft;
