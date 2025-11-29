@@ -33,6 +33,7 @@ int main()
 
     // Création de la fenêtre principale du jeu
     SDL_Window *window = SDL_CreateWindow("Shooter in C", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
+
     if (!window)
     {
         SDL_Log("Erreur création fenêtre: %s", SDL_GetError());
@@ -41,6 +42,7 @@ int main()
 
     // Création du renderer pour dessiner dans la fenêtre
     SDL_Renderer *render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
     if (!render)
     {
         SDL_Log("Erreur création renderer: %s", SDL_GetError());
@@ -49,6 +51,7 @@ int main()
 
     // Chargement de l'image de fond du jeu
     SDL_Texture *background = IMG_LoadTexture(render, "../assets/bg.jpg");
+
     if (!background)
     {
         SDL_Log("Erreur chargement background: %s", IMG_GetError());
@@ -67,7 +70,17 @@ int main()
 
     // Allocation mémoire pour le joueur et les entités
     Player *player = malloc(sizeof(Player));
+
+    if (!player)
+    {
+      printf("Erreur d'allocation pour Player\n");
+    }
     Entities *entities = malloc(sizeof(Entities));
+
+    if (!entities)
+    {
+      printf("Erreur d'allocation de la mémoire pour entities\n");
+    }
 
     // Initialisation des champs de la structure Entities
     entities->player = player;

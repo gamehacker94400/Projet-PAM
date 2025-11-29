@@ -290,20 +290,16 @@ void Game(SDL_Renderer *render, Entities *entities, SDL_Texture *background, TTF
   // Gérer les entrées clavier
   if (keystate[SDL_SCANCODE_SPACE])
   {
-    if (!entities->IsPlaying)
-    {
+    if (!entities->IsPlaying) {
       entities->IsPlaying = true;
       return;
-    }else
-    {
+    } else {
       entities->player->LaunchProject(entities->projectile, render, entities->player);
     }
   }
 
-  if (keystate[SDL_SCANCODE_ESCAPE])
-  {
-    if (entities->IsPlaying)
-    {
+  if (keystate[SDL_SCANCODE_ESCAPE]) {
+    if (entities->IsPlaying) {
       entities->IsPlaying = false;
       Home(render, background);
     }
@@ -312,33 +308,27 @@ void Game(SDL_Renderer *render, Entities *entities, SDL_Texture *background, TTF
   if (!entities->IsPlaying) return;
 
   // Déplacement joueur
-  if (keystate[SDL_SCANCODE_RIGHT])
-  {
+  if (keystate[SDL_SCANCODE_RIGHT]) {
     entities->player->MoveRight(entities->player, entities->monster[countmonster]);
   }
 
-  if (keystate[SDL_SCANCODE_LEFT])
-  {
+  if (keystate[SDL_SCANCODE_LEFT]) {
     entities->player->MoveLeft(entities->player);
   }
 
   // Logique de jeu
   UpdateEvent(entities);
 
-  if (entities->event_start)
-  {
+  if (entities->event_start) {
     FallAllComets(entities);
 
-    if (entities->JusteStarted)
-    {
+    if (entities->JusteStarted) {
       for (int i = 0; i < MAX_MONSTER; i++)
-      {
         ClearMonster(entities, i);
-      }
+
       entities->JusteStarted = false;
     }
-  } else
-  {
+  } else {
     ForwardAllMonster(entities);
   }
 
@@ -358,3 +348,4 @@ void Game(SDL_Renderer *render, Entities *entities, SDL_Texture *background, TTF
     Home(render, background);
   }
 }
+

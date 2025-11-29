@@ -22,15 +22,15 @@
 
 typedef struct
 {
-  Player *player;
-  Monster *monster[MAX_MONSTER];
-  Projectile *projectile[MAX_PROJECTILE];
-  Comet *comets[MAX_COMET];
+  Player *player; // structure du player
+  Monster *monster[MAX_MONSTER]; // structure des monstres 
+  Projectile *projectile[MAX_PROJECTILE]; // structure des projectile lance par le joueur
+  Comet *comets[MAX_COMET]; // structure des comets lors de l'event
 
   // États principaux du jeu
-  bool event_start;        // Indique si l'événement des comètes est en cours
+  bool EventStart;        // Indique si l'événement des comètes est en cours
   bool JusteStarted;       // Permet de savoir si l’événement vient de commencer pour réinitialiser les monstres une seule fois
-  bool is_playing;         // Indique si le jeu est en cours
+  bool IsPlaying;         // Indique si le jeu est en cours
 
   // Variables pour la barre de pourcentage de l'événement
   double EventPercent;       // Pourcentage de progression de l'événement
