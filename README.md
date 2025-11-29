@@ -8,6 +8,7 @@ Projet-PAM est un jeu développé en utilisant SDL (Simple DirectMedia Layer) av
 - **Plateforme** : Construit avec SDL pour une compatibilité multiplateforme.
 - **Plans futurs** :
   - Implémenter des animations.
+  - Bien sur il me faut apprendre plus 
   - Ajouter de nouvelles fonctionnalités pour enrichir l'expérience de jeu.
 
 ## Installation et Utilisation
