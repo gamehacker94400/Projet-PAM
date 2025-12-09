@@ -39,7 +39,7 @@ Pour commencer avec Projet-PAM, suivez ces étapes :
 ## Feuille de Route
 - [ ] Ajouter des animations au jeu.
 - [ ] Introduire de nouvelles fonctionnalités de gameplay.
-- [x] Améliorer l'interface utilisateur et l'expérience.
+- [] Améliorer l'interface utilisateur et l'expérience.
 
 ## Licence
 nothing for now.
