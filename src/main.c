@@ -84,9 +84,9 @@ int main()
 
     // Initialisation des champs de la structure Entities
     entities->player = player;
-    entities->is_playing = false;          // Le jeu commence en pause (dans le menu d'accueil)
+    entities->IsPlaying = false;          // Le jeu commence en pause (dans le menu d'accueil)
     entities->EventPercentSpeed = 5;       // Vitesse de chargement de la barre d'événement
-    entities->event_start = false;         // L'événement (météorites) n'est pas encore lancé
+    entities->EventStart = false;         // L'événement (météorites) n'est pas encore lancé
     entities->JusteStarted = true;         // Permet d'afficher une seule fois l'écran d'accueil
 
     // Chargement et initialisation du joueur, des monstres, des projectiles et des météorites

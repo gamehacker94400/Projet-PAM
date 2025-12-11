@@ -54,7 +54,7 @@ void RenderAll(SDL_Renderer *render, SDL_Texture *background, Entities *entities
   RenderMonsters(entities, render);
   RenderEventBar(render, entities);
 
-  if (entities->event_start)
+  if (entities->EventStart)
   {
     RenderComet(entities, render);
   }
@@ -167,15 +167,15 @@ void UpPercent(Entities *entities)
 // Met à jour l'état de l'événement comète
 void UpdateEvent(Entities *entities)
 {
-  if(entities->EventPercent >= 100 && !entities->event_start)
+  if(entities->EventPercent >= 100 && !entities->EventStart)
   {
-    entities->event_start = true;
+    entities->EventStart = true;
     entities->JusteStarted = true;
   }
 
-  if (entities->event_start && AllCometsFallen(entities->comets))
+  if (entities->EventStart && AllCometsFallen(entities->comets))
   {
-    entities->event_start = false;
+    entities->EventStart = false;
     ActivateComets(entities);
     entities->EventPercent = 0;
   }
@@ -325,7 +325,7 @@ void Game(SDL_Renderer *render, Entities *entities, SDL_Texture *background, TTF
   // Logique de jeu
   UpdateEvent(entities);
 
-  if (entities->event_start)
+  if (entities->EventStart)
   {
     FallAllComets(entities);
 

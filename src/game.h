@@ -14,7 +14,7 @@
 #include "projectile.h"
 #include "comet.h"
 
-#define SCREEN_WIDTH 1400
+#define SCREEN_WIDTH 1300
 #define SCREEN_HEIGHT 600
 #define MAX_MONSTER 4
 #define MAX_PROJECTILE 20
