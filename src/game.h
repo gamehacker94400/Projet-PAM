@@ -20,8 +20,7 @@
 #define MAX_PROJECTILE 20
 #define MAX_COMET 20
 
-typedef struct
-{
+typedef struct Entities {
   Player *player; // structure du player
   Monster *monster[MAX_MONSTER]; // structure des monstres 
   Projectile *projectile[MAX_PROJECTILE]; // structure des projectile lance par le joueur
@@ -31,6 +30,7 @@ typedef struct
   bool EventStart;        // Indique si l'événement des comètes est en cours
   bool JusteStarted;       // Permet de savoir si l’événement vient de commencer pour réinitialiser les monstres une seule fois
   bool IsPlaying;         // Indique si le jeu est en cours
+  int GameLvl;
 
   // Variables pour la barre de pourcentage de l'événement
   double EventPercent;       // Pourcentage de progression de l'événement

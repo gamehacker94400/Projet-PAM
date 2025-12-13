@@ -3,9 +3,12 @@
 
 #include <SDL2/SDL_image.h>
 
+#define MAX_SPEED 10
+
 // Déclaration anticipée de la structure Player pour éviter les dépendances circulaires
 // Cela permet d'utiliser le type Player sans inclure player.h
 typedef struct Player Player;
+typedef struct Entities Entities;
 
 // Enumération définissant les types possibles de monstres
 // Chaque type a des caractéristiques différentes (ex : MONSTER standard, ALIEN spécial)
@@ -26,7 +29,7 @@ typedef struct Monster
   int is_alive;                // Indicateur de l'état du monstre (1 = vivant, 0 = mort)
 
   // Fonction de réinitialisation du monstre (utilisée pour réinitialiser sa position, ses stats, etc.)
-  void (*reset)(struct Monster *);                            
+  void (*reset)(struct Monster *, struct Entities *);                            
 
   // Fonction pour déplacer le monstre vers le joueur
   void (*forward)(struct Monster *, Player *);                
@@ -50,7 +53,7 @@ void initMonster(Monster *, SDL_Renderer *, const char *);
 void initAlien(Monster *, SDL_Renderer *, const char *);
 
 // Réinitialise un monstre à sa position initiale et réinitialise ses statistiques (par exemple, sa vie)
-void resetMonster(Monster *);
+void resetMonster(Monster *, Entities *);
 
 // Libère la mémoire allouée pour tous les monstres dans un tableau de pointeurs de monstres
 // Cela permet de nettoyer la mémoire lorsque les monstres sont supprimés ou ne sont plus nécessaires

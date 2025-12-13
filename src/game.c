@@ -105,7 +105,7 @@ bool CheckCollision(SDL_Rect *firstRect, SDL_Rect *secondRect)
 // Réinitialise un monstre donné
 void ClearMonster(Entities *entitie, int count)
 {
-  resetMonster(entitie->monster[count]);
+  resetMonster(entitie->monster[count], entitie);
 }
 
 // Initialise toutes les comètes du jeu
@@ -269,7 +269,7 @@ void FreeProjectiles(Entities *entitie)
 void GameOver(Entities *entities){
   for (int i = 0; i < MAX_MONSTER; i++)
   {
-    resetMonster(entities->monster[i]);
+    resetMonster(entities->monster[i], entities);
   }
   entities->player->health = entities->player->max_health;
   entities->EventPercent = 0;
@@ -331,6 +331,7 @@ void Game(SDL_Renderer *render, Entities *entities, SDL_Texture *background, TTF
 
     if (entities->JusteStarted)
     {
+      entities->GameLvl++;
       for (int i = 0; i < MAX_MONSTER; i++)
       {
         ClearMonster(entities, i);

@@ -63,14 +63,14 @@ void HealthBarMonster(Monster *monster, SDL_Renderer *render)
 
 // Réinitialise les caractéristiques d'un monstre (position, vie, etc.) selon son type.
 // Cette fonction permet de remettre à zéro les statistiques du monstre après sa mort ou lors d'un respawn.
-void resetMonster(Monster *monster)
+void resetMonster(Monster *monster, Entities *entities)
 {
     switch(monster->type)
     {
         case MONSTER:
             // Pour un monstre standard, définir une position aléatoire et réinitialiser la vie
             monster->rect.x = rand() % (SCREEN_WIDTH - 1350 + 1) + 1350;  // Nouvelle position aléatoire à droite
-            monster->velocity = rand() % (5 - 1 + 1) + 1;  // Vitesse aléatoire
+            monster->velocity = rand() % (MAX_SPEED - 1 + entities->GameLvl) + entities->GameLvl;  // Vitesse aléatoire
             monster->health = monster->max_health;  // Réinitialiser la santé
             monster->is_alive = true;  // Le monstre est réanimé
             break;
