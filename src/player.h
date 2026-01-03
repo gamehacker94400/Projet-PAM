@@ -33,7 +33,7 @@ typedef struct Player
 } Player;
 
 // Fonction d'initialisation du joueur, appelée pour configurer ses valeurs par défaut.
-void initPlayer(Player *, SDL_Renderer *, const char *);
+void InitPlayer(Player *, SDL_Renderer *, const char *);
 
 #endif
 

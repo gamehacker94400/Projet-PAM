@@ -90,7 +90,7 @@ int main()
     entities->JusteStarted = true;         // Permet d'afficher une seule fois l'écran d'accueil
 
     // Chargement et initialisation du joueur, des monstres, des projectiles et des météorites
-    initPlayer(player, render, "../assets/player.png");
+    InitPlayer(player, render, "../assets/player.png");
     InitMonsters(render, entities);
     InitProjectiles(entities, render);
     InitComets(render, entities);

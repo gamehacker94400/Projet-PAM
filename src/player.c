@@ -70,7 +70,7 @@ void LaunchProject(Projectile *project[], SDL_Renderer *render, Player *player)
 }
 
 // Initialise le joueur avec des paramètres par défaut (position, taille, attaque, santé, etc.)
-void initPlayer(Player *player, SDL_Renderer *render, const char *imgpath)
+void InitPlayer(Player *player, SDL_Renderer *render, const char *imgpath)
 {
   player->rect.x = 0;  // Position initiale du joueur (gauche de l'écran)
   player->rect.y = 350;  // Position verticale du joueur
