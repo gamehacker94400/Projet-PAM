@@ -105,6 +105,7 @@ bool CheckCollision(SDL_Rect *firstRect, SDL_Rect *secondRect)
 // Réinitialise un monstre donné
 void ClearMonster(Entities *entitie, int count)
 {
+  printf("Reseting a monster\n");
   resetMonster(entitie->monster[count], entitie);
 }
 

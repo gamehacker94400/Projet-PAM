@@ -43,7 +43,7 @@ void HealthBarPlayer(SDL_Renderer *render, Player *player)
 // Gère les dégâts infligés au joueur. Si la santé du joueur tombe à zéro ou moins, il meurt.
 void DamagePlayer(Player *player, double damage)
 {
-  if ((player->health - damage) > damage)  // Si la santé restante est toujours positive
+  if ((player->health - damage) > 0)  // Si la santé restante est toujours positive
   {
     player->health -= damage;  // Réduit la santé du joueur
   }
