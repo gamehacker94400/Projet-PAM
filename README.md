@@ -40,6 +40,7 @@ Pour commencer avec Projet-PAM, suivez ces étapes :
 - [ ] Ajouter des animations au jeu.
 - [ ] Introduire de nouvelles fonctionnalités de gameplay.
 - [ ] Améliorer l'interface utilisateur et l'expérience.
+- [ ] Ajouter un système de niveau de difficulté
 
 ## Licence
-nothing for now.
+not for commercial use
